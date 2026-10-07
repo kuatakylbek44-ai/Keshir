@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ff6fa5">
+  <title>Ақылымды кешірші</title>
+  <meta name="description" content="Жүректен шыққан кешірім сөзі">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <div id="hearts-layer" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <nav class="nav" aria-label="Негізгі мәзір">
+    <a href="#hero" class="nav-logo">Кешір <span class="nav-heart">♥</span></a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Мәзірді ашу" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <a href="#hero" class="nav-link">Басты бет</a>
+      <a href="#words" class="nav-link">Сөзім</a>
+      <a href="#ask" class="nav-link">Кешірім</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <p class="hero-kicker reveal">Жүректен шыққан сөз</p>
+    <h1 class="hero-title reveal">
+      <span class="hero-name">Кешір мені</span>
+      <span class="hero-age"><span class="age-number">♥</span><span class="age-word">жаным</span></span>
+    </h1>
+    <p class="hero-sub reveal">Бір демге ойлан, сөйт те жүрегіме қайта сен.<br>Ақылымды кешірші — бұл менің ең шын өтінішім.</p>
+    <div class="hero-actions reveal">
+      <a href="#words" class="btn btn-primary">Сөзімді оқу</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="mouse"><span class="wheel"></span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="section words" id="words">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Аз ғана сөзім</span>
+        <h2 class="section-title">Жүректен өткен сөздер</h2>
+      </div>
+      <div class="about-grid">
+        <article class="card about-card reveal">
+          <div class="card-icon">🕊️</div>
+          <h3>Сен — менің тыныштығым</h3>
+          <p>Сенің күлкің — менің тынысым, жүзің — жүрегімнің жарығы. Сенсіз сәуле сөнеді.</p>
+        </article>
+        <article class="card about-card reveal">
+          <div class="card-icon">🌷</div>
+          <h3>Ақылымнан асып кеттім</h3>
+          <p>Білмей айтылған сөз, ойланбай жасалған іс — бәрі де менің ақылымнан асып кетті. Сол үшін өкінемін.</p>
+        </article>
+        <article class="card about-card reveal">
+          <div class="card-icon">🌙</div>
+          <h3>Сенің мейіріміңе сенемін</h3>
+          <p>Кешірім — үлкен жүректің ісі. Мен сенің жүрегіңнің биіктігіне сенемін.</p>
+        </article>
+      </div>
+      <blockquote class="about-quote reveal">
+        <p>«Ақылымды кешірші. Әр қатем — ойланбағандығынан, ал әр өтінішім — жүрегімнің шынайы сөзі.»</p>
+      </blockquote>
+    </section>
+
+    <section class="section ask" id="ask">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Бір ғана сұрақ</span>
+        <h2 class="section-title">Мені кешіресің бе?</h2>
+      </div>
+      <div class="ask-card reveal" id="askCard">
+        <div class="ask-heart" aria-hidden="true">💛</div>
+        <p class="ask-question">Жаным, жүрегімнің өтініші —<br>мені кешіресің бе?</p>
+        <div class="ask-btns">
+          <button type="button" class="btn btn-primary btn-yes" id="btnYes">Иә, кешіремін 💛</button>
+          <button type="button" class="btn btn-no" id="btnNo">Жоқ</button>
+        </div>
+        <div class="ask-status" id="askStatus" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section finale">
+      <div class="finale-inner reveal">
+        <div class="finale-cake" aria-hidden="true">🕊️</div>
+        <h2 class="finale-title">Кешірім — бақыттың басы</h2>
+        <p class="finale-sub">Сенің әр күнің жарқын болсын. Жүрек әрқашан таза болсын!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-sign">Ізгі тілекпен, <span class="footer-sign-name">Ақылбектен</span></p>
+    <p class="footer-line">Өкініш — уақытша, кешірім — мәңгілік 🕊️</p>
+    <p class="footer-year">© <span id="year"></span></p>
+  </footer>
+
+  <button type="button" class="music-btn" id="musicBtn" aria-pressed="false" aria-label="Музыканы ойнату">
+    <span class="music-btn-icon" aria-hidden="true">♪</span>
+    <span class="music-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-label">Музыка</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
