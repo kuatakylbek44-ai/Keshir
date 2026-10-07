@@ -47,8 +47,8 @@
 
   /* ---------- floating hearts ---------- */
   var heartsLayer = document.getElementById("hearts-layer");
-  var HEART_SYMBOLS = ["♥", "♡", "❤"];
-  var HEART_COLORS = ["#ff6fa5", "#ff3d85", "#ffb347", "#b28dff", "#ff9ec4"];
+  var HEART_SYMBOLS = ["✿", "❀", "✾", "✽"];
+  var HEART_COLORS = ["#ffb347", "#ff3d85", "#b28dff", "#8fd3ff", "#ff9ec4"];
 
   function spawnHeart() {
     if (!heartsLayer || document.hidden) return;
@@ -394,8 +394,8 @@
       setTimeout(function () {
         showFinale(
           "<strong>Аха, сенің келісетініңді білдім! 😌</strong><br>" +
-          "«Жоқ» — онша сенімді емес сияқты 🙂<br>" +
-          "Кешіріміңе рахмет!"
+          "«Жоқ» батырмасы өзі қаша бастады.<br>" +
+          "Кешіріміңе рахмет, Әдемі!"
         );
       }, 700);
       return;
@@ -441,9 +441,9 @@
       }
       setTimeout(function () {
         showFinale(
-          "<strong>Кешірім қабылдағаның үшін рахмет!</strong><br>" +
-          "Сен — түсінігі кең адамсың, бұл мен үшін маңызды.<br>" +
-          "Алдағы сөздерім ойланып айтылатынына уәде беремін. 🕊️"
+          "<strong>Кешіріміңе рахмет, Әдемі!</strong><br>" +
+          "Сені сыйлайтынымды білсін деп алдын ала айтқан едім — бұл сөз өзгермейді.<br>" +
+          "Алдағы сөздерім ойланып айтылады — уәде. 🕊️"
         );
       }, 600);
     });
